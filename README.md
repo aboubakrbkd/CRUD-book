@@ -23,15 +23,15 @@ CRUD-book/
 └── .env # Environment variables
 
 # 2. Install Dependencies
-npm install
+  npm install
 
 # 3. Set Up Environment Variables
 # Create a .env file in the root directory with the following content:
-# PORT=3001
-# DB_HOST=localhost
-# DB_USER=root
-# DB_PASSWORD=yourpassword
-# DB_NAME=yourdatabasename
+  PORT=3001
+  DB_HOST=localhost
+  DB_USER=root
+  DB_PASSWORD=yourpassword
+  DB_NAME=yourdatabasename
 
 # 4. Start the Server
-node app.js
+  node app.js
