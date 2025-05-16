@@ -1,14 +1,19 @@
 # CRUD-book
-A simple CRUD application for a book store 
-A simple RESTful API built with Node.js, Express, and MySQL to manage a collection of books.
+
+A simple CRUD application for a book store.  
+A RESTful API built with **Node.js**, **Express**, and **MySQL** to manage a collection of books.
+
+---
 
 ## 🔧 Technologies Used
 
-- **Node.js** – JavaScript runtime
-- **Express.js** – Web framework for building API routes
-- **MySQL** – Relational database for storing book data
-- **dotenv** – For managing environment variables
-- **Postman** – For testing the API
+- **Node.js** – JavaScript runtime  
+- **Express.js** – Web framework for building API routes  
+- **MySQL** – Relational database for storing book data  
+- **dotenv** – For managing environment variables  
+- **Postman** – For testing the API  
+
+---
 
 ## 📁 Project Structure
 
@@ -22,10 +27,14 @@ CRUD-book/
 │ └── db.js # MySQL database connection
 └── .env # Environment variables
 
-### 2. Install Dependencies
-  ```npm install
-  
-### 3. Set Up Environment Variables
+## 🚀 Getting Started
+
+### 1. Install Dependencies
+
+```bash
+npm install
+
+### 2. Set Up Environment Variables and Start the Server
 
 Create a `.env` file in the root directory and add the following:
 
@@ -35,7 +44,3 @@ DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=yourpassword
 DB_NAME=yourdatabasename
-
-
-### 4. Start the Server
-  ```node app.js
