@@ -16,7 +16,7 @@ A RESTful API built with **Node.js**, **Express**, and **MySQL** to manage a col
 ---
 
 ## 📁 Project Structure
-
+```
 CRUD-book/
 ├── app.js # Entry point
 ├── routes/
@@ -26,6 +26,7 @@ CRUD-book/
 ├── models/
 │ └── db.js # MySQL database connection
 └── .env # Environment variables
+```
 
 ## 🚀 Getting Started
 
