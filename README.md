@@ -22,16 +22,20 @@ CRUD-book/
 │ └── db.js # MySQL database connection
 └── .env # Environment variables
 
-# 2. Install Dependencies
-  npm install
+### 2. Install Dependencies
+  ```npm install
+  
+### 3. Set Up Environment Variables
 
-# 3. Set Up Environment Variables
-# Create a .env file in the root directory with the following content:
-  PORT=3001
-  DB_HOST=localhost
-  DB_USER=root
-  DB_PASSWORD=yourpassword
-  DB_NAME=yourdatabasename
+Create a `.env` file in the root directory and add the following:
 
-# 4. Start the Server
-  node app.js
+```env
+PORT=3001
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=yourpassword
+DB_NAME=yourdatabasename
+
+
+### 4. Start the Server
+  ```node app.js
