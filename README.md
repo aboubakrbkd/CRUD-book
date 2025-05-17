@@ -5,43 +5,31 @@ A RESTful API built with **Node.js**, **Express**, and **MySQL** to manage a col
 
 ---
 
+## Description
+
+This project allows users to create, read, update, and delete books from a MySQL database with JWT-based authentication protecting certain routes.
+
+---
+
 ## 🔧 Technologies Used
 
 - **Node.js** – JavaScript runtime  
+- **JWT** – JSON Web Tokens for user authentication  
 - **Express.js** – Web framework for building API routes  
 - **MySQL** – Relational database for storing book data  
+- **Docker** – Containerization platform to run the app easily  
 - **dotenv** – For managing environment variables  
 - **Postman** – For testing the API  
 
 ---
 
-## 📁 Project Structure
-```
-CRUD-book/
-├── app.js # Entry point
-├── routes/
-│ └── bookRoutes.js # All route definitions
-├── controllers/
-│ └── bookController.js # Logic for handling requests
-├── models/
-│ └── db.js # MySQL database connection
-└── .env # Environment variables
-```
-
 ## 🚀 Getting Started
 
-### 1. Install Dependencies
+Make sure you have a `.env` file configured with your database and JWT secrets before running.
 
 ```bash
-npm install
-
-### 2. Set Up Environment Variables and Start the Server
-
-Create a `.env` file in the root directory and add the following:
-
-```env
-PORT=3001
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=yourpassword
-DB_NAME=yourdatabasename
+git clone git@github.com:aboubakrbkd/CRUD-book.git
+cd CRUD-book/CRUD-book/
+docker build -t crud_book .
+docker run -p 3001:3001 --env-file .env crud_book
+```
