@@ -52,3 +52,25 @@ exports.signup = async (req, res) => {
         res.status(500).json({ message: 'Internal server error' });
     }
 }
+
+exports.refresh = (req, res) => {
+    const token = req.cookies.refreshToken;
+    if (!token)
+        return res.status(401).json({message: 'No refresh token'});
+    try {
+        const verify = jwt.verify(token, process.env.JWT_REFRESH);
+        const newToken =  jwt.sign({username: verify.username}, process.env.JWT_SECRET, {expiresIn: '15m'});
+        res.json({accesToken: newToken});
+    } catch (err) {
+        console.log(err);
+        res.status(403).json({message: 'Invalid refresh token'});
+    }
+}
+
+exports.logout = (req, res) => {
+    res.clearCookie('refreshToken', { 
+        httpOnly: true,
+        sameSite: 'Strict',
+        secure: true });
+    res.json({ message: 'Logged out' });
+}

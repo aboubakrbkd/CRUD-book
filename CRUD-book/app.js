@@ -1,13 +1,19 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const bookRoutes = require('./routes/bookRoutes');
 const authRoutes = require('./routes/authRoutes');
 const app = express();
 
+const corsOption = {
+    origin: 'http://localhost:5173',
+    Credentials: true,
+};
 
 app.use(express.json());
 app.use(cookieParser());
+app.use(cors(corsOption));
 app.use('/api/books', bookRoutes);
 app.use('/', authRoutes);
 
@@ -21,3 +27,10 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is listening on http://localhost:${PORT}`);
 });
+
+
+
+//authorization and role permessions (admin, owner ..)
+//refresh token and logoout /logout
+//email verification and password reset
+//file auploads
