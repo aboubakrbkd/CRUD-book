@@ -29,8 +29,6 @@ app.listen(PORT, () => {
 });
 
 
-
 //authorization and role permessions (admin, owner ..)
-//refresh token and logoout /logout
 //email verification and password reset
 //file auploads
